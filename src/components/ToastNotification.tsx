@@ -13,17 +13,38 @@ const entries = [
   { name: "Juliana M.", city: "Campinas, SP", area: "Tráfego Pago" },
 ];
 
+const resultToasts = [
+  { name: "Lucas M.", city: "São Paulo, SP", value: "R$347,00", time: "hoje" },
+  { name: "Camila R.", city: "Goiânia, GO", value: "R$1.290,00", time: "ontem" },
+  { name: "Rafael T.", city: "Florianópolis, SC", value: "R$89,00", time: "hoje" },
+  { name: "Diego L.", city: "Rio de Janeiro, RJ", value: "R$2.100,00", time: "essa semana" },
+];
+
 const ToastNotification = () => {
   const [visible, setVisible] = useState(false);
-  const [current, setCurrent] = useState({ name: "", city: "", area: "" });
+  const [current, setCurrent] = useState<any>({ name: "", city: "", area: "" });
+  const [isResult, setIsResult] = useState(false);
 
   useEffect(() => {
     let idx = 0;
+    let resultIdx = 0;
+    let counter = 0;
+
     const show = () => {
-      const i = idx % entries.length;
-      setCurrent(entries[i]);
+      counter++;
+      if (counter % 4 === 0) {
+        const i = resultIdx % resultToasts.length;
+        setCurrent(resultToasts[i]);
+        setIsResult(true);
+        resultIdx++;
+      } else {
+        const i = idx % entries.length;
+        setCurrent(entries[i]);
+        setIsResult(false);
+        idx++;
+      }
+      
       setVisible(true);
-      idx++;
       setTimeout(() => setVisible(false), 4500);
     };
 
@@ -45,11 +66,15 @@ const ToastNotification = () => {
         className="w-9 h-9 rounded-full flex items-center justify-center text-[13px] font-bold shrink-0 font-body"
         style={{ background: "rgba(111,181,53,0.16)", color: "hsl(98 55% 42%)" }}
       >
-        {current.name ? current.name.charAt(0) : ""}
+        {isResult ? "💰" : (current.name ? current.name.charAt(0) : "")}
       </div>
       <div>
         <div className="text-[12px] font-bold text-foreground mb-0.5 font-body">{current.name} · {current.city}</div>
-        <div className="text-[10px] text-primary/70 font-body">{current.area} · entrou por R$29</div>
+        {isResult ? (
+          <div className="text-[10px] text-primary/70 font-body">faturou {current.value} {current.time}</div>
+        ) : (
+          <div className="text-[10px] text-primary/70 font-body">{current.area} · entrou por R$29</div>
+        )}
       </div>
     </div>
   );

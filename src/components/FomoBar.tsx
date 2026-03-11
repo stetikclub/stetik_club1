@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 const FomoBar = () => {
   const [vagas, setVagas] = useState(7);
   const [timer, setTimer] = useState("10:00");
+  const [msgIndex, setMsgIndex] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+  const [viewers] = useState(Math.floor(Math.random() * 5) + 4);
 
   useEffect(() => {
     const TKEY = "stetik_timer_v3";
@@ -43,6 +46,17 @@ const FomoBar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOpacity(0);
+      setTimeout(() => {
+        setMsgIndex((prev) => (prev + 1) % 3);
+        setOpacity(1);
+      }, 300);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
       className="fixed top-0 left-0 right-0 z-[9999] h-10 flex items-center justify-center gap-2.5 font-body uppercase backdrop-blur-[14px]"
@@ -55,9 +69,22 @@ const FomoBar = () => {
       }}
     >
       <span className="pulse-dot" style={{ width: 6, height: 6 }} />
-      <span>
-        <b className="text-primary">{vagas}</b> vagas disponíveis &nbsp;·&nbsp; Oferta encerra em{" "}
-        <b className="text-primary">{timer}</b>
+      <span className="transition-opacity duration-300" style={{ opacity }}>
+        {msgIndex === 0 && (
+          <>
+            🔴 <b className="text-primary">{vagas}</b> vagas disponíveis &nbsp;·&nbsp; Oferta encerra em <b className="text-primary">{timer}</b>
+          </>
+        )}
+        {msgIndex === 1 && (
+          <>
+            ⚡ Lote 1 quase esgotado — próximo lote sem bônus e preço maior
+          </>
+        )}
+        {msgIndex === 2 && (
+          <>
+            👁 {viewers} pessoas nessa página agora &nbsp;·&nbsp; <b className="text-primary">{vagas}</b> vagas restantes
+          </>
+        )}
       </span>
     </div>
   );

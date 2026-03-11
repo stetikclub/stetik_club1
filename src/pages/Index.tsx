@@ -15,6 +15,10 @@ import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import ToastNotification from "@/components/ToastNotification";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import LossCalculator from "@/components/LossCalculator";
+import LifeVisionSection from "@/components/LifeVisionSection";
+import VsSection from "@/components/VsSection";
+import MicroCommitSection from "@/components/MicroCommitSection";
 
 const Index = () => {
   return (
@@ -26,11 +30,15 @@ const Index = () => {
       <FomoBar />
       <HeroSection />
       <MatrixSection />
+      <LossCalculator />
       <AboutSection />
       <PillarsSection />
       <ForWhoSection />
+      <VsSection />
+      <MicroCommitSection />
       <BonusSection />
       <TestimonialsSection />
+      <LifeVisionSection />
       <InvestmentSection />
       <GuaranteeSection />
       <FaqSection />
