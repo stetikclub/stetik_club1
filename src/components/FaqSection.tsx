@@ -2,13 +2,11 @@ import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const faqs = [
-  { q: "R$29 por mês? O que tem de catch?", a: "Nenhum. O preço é esse porque o objetivo é volume — queremos que mais pessoas executando gerem mais resultado dentro da comunidade. Sem contrato, sem fidelidade. Cancela quando quiser." },
-  { q: "Isso é mais um curso que vou comprar e não assistir?", a: "Não é um curso. É uma comunidade ativa. Não tem grade de aulas para zerar. Tem encontros ao vivo, trocas diárias, estratégias em tempo real. Você entra, participa, executa." },
-  { q: "Eu sou iniciante. Serve para mim?", a: "Sim — especialmente para você. Começar sozinho é o maior erro que existe no digital. O ambiente certo encurta anos de tentativa e erro. Dentro da Stetik Club você vai ter direção desde o primeiro dia." },
-  { q: "Já fatura bem. Ainda faz sentido entrar?", a: "Quem já está no nível sabe: o próximo degrau raramente se sobe sozinho. O networking de bastidor — pessoas que constroem operações reais — é o que a Stetik Club entrega." },
-  { q: "Como funciona o acesso? É imediato?", a: "Sim. Assim que o pagamento é confirmado, você recebe acesso imediato à comunidade, aos encontros ao vivo e a todo o conteúdo dos 8 pilares." },
-  { q: "Posso cancelar a qualquer momento?", a: "Sim, sem burocracia. Cancela pelo próprio painel, sem precisar falar com ninguém." },
-  { q: "Por que o acesso é limitado?", a: "Porque comunidade com qualidade tem limite. Não queremos uma audiência de milhares sem conexão — queremos um grupo seleto onde todo membro agrega de verdade." },
+  { q: "R$29 é mensalidade?", a: "NÃO. É um pagamento único. Você paga R$29 UMA VEZ e tem acesso vitalício ao Stetik Club e a todos os bônus. Sem pegadinha, sem cobrança surpresa no mês que vem." },
+  { q: "Eu sou CLT e não tenho tempo. Serve pra mim?", a: "Se você não tem tempo pra mudar de vida, vai ser CLT pra sempre. O Clube foi desenhado pra quem tem 1h por dia pra executar. Direto ao ponto, sem enrolação." },
+  { q: "E se eu não gostar?", a: "Você tem 7 dias de garantia incondicional. Entra, olha tudo. Se achar que é mais do mesmo, aperta um botão e eu devolvo seus R$29. Risco zero." },
+  { q: "Como eu acesso?", a: "Assim que o pagamento for aprovado, você recebe o acesso imediato no seu e-mail. Pagamentos via PIX ou Cartão liberam na hora." },
+  { q: "Por que tão barato?", a: "Porque eu quero criar a maior comunidade de execução do Brasil. R$29 é só um filtro pra tirar os curiosos e deixar só quem realmente quer fazer acontecer." },
 ];
 
 const FaqSection = () => {
@@ -21,7 +19,7 @@ const FaqSection = () => {
       <div ref={ref} className="fade-in max-w-[720px] mx-auto">
         <p className="text-[10px] tracking-[5px] uppercase text-primary/70 mb-4 font-body">Dúvidas frequentes</p>
         <h2 className="font-display font-light leading-[0.9] tracking-tight text-foreground mb-12" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-          Tudo que você<br /><em className="italic text-primary">queria perguntar.</em>
+          Ainda tem<br /><em className="italic text-primary">desculpas?</em>
         </h2>
 
         <div className="border-t border-foreground/5">
@@ -42,7 +40,7 @@ const FaqSection = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="font-body text-[11px] text-foreground/20 mb-5">Ainda em dúvida? A maior dúvida é ficar parado enquanto outros avançam.</p>
+          <p className="font-body text-[11px] text-foreground/20 mb-5">A maior dúvida é ficar parado enquanto outros avançam.</p>
           <a href="#investment" className="inline-flex items-center gap-2 border border-primary/30 px-8 py-3 font-body text-[10px] tracking-[4px] uppercase text-primary no-underline transition-colors hover:border-primary hover:text-foreground">
             Ver condições de entrada
           </a>

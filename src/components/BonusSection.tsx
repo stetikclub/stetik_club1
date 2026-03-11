@@ -6,23 +6,33 @@ const BonusSection = () => {
   const bonuses = [
     {
       tag: "Bônus 01",
-      title: "Acesso ao Discord exclusivo",
-      desc: "Canais organizados por tema — tráfego, copy, design, branding. Troca em tempo real com quem está no jogo.",
+      title: "Mentoria 1:1 comigo",
+      desc: "30 min personalizada pra sua situação — R$197 grátis (some com a última vaga)",
     },
     {
       tag: "Bônus 02",
-      title: "Gravações de todos os encontros",
-      desc: "Perdeu uma call ao vivo? Todas ficam gravadas e organizadas para você assistir quando quiser.",
+      title: "Primeira Venda em 7 Dias",
+      desc: "Método simples pra quem nunca vendeu — R$97 grátis",
     },
     {
       tag: "Bônus 03",
-      title: "Grupo VIP no WhatsApp",
-      desc: "Networking direto. Compartilhamento de estratégias, oportunidades e resultados em tempo real.",
+      title: "Mapa da Virada",
+      desc: "Meu caminho real do zero — R$67 grátis",
     },
     {
       tag: "Bônus 04",
-      title: "Templates & frameworks",
-      desc: "Modelos prontos de funis, copies, estruturas de anúncios e checklists de lançamento.",
+      title: "Biblioteca de mensagens e anúncios prontos",
+      desc: "R$47 grátis",
+    },
+    {
+      tag: "Bônus 05",
+      title: "Onboarding ao Vivo exclusivo comigo",
+      desc: "R$47 grátis",
+    },
+    {
+      tag: "Bônus 06",
+      title: "Acesso vitalício às gravações de todas as calls",
+      desc: "R$97 grátis",
     },
   ];
 
@@ -31,9 +41,18 @@ const BonusSection = () => {
       <div className="divline" />
       <div ref={ref} className="fade-in max-w-[680px] mx-auto">
         <p className="text-[10px] tracking-[5px] uppercase text-primary/70 mb-4 font-body">Inclusos na sua vaga</p>
-        <h2 className="font-display font-light leading-[0.9] tracking-tight text-foreground mb-12" style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}>
-          Além dos 8 pilares,<br />você leva <em className="italic text-primary">tudo isso.</em>
+        <h2 className="font-display font-light leading-[0.9] tracking-tight text-foreground mb-6" style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}>
+          Antes de revelar o valor,<br />eu quero te dar <em className="italic text-primary">algo.</em>
         </h2>
+        <p className="font-body text-[13px] text-foreground/70 leading-[1.8] mb-10">
+          Eu sei como é estar no seu lugar, então criei esses bônus exclusivos pra te dar uma vantagem real.
+          <br /><br />
+          Valor real do clube + bônus: <span className="line-through text-foreground/40">R$997+</span>
+          <br />
+          <strong className="text-primary">Você leva hoje por apenas R$29 uma única vez (sem mensalidade).</strong>
+        </p>
+
+        <p className="text-[10px] tracking-[3px] uppercase text-foreground/50 mb-6 font-body">Bônus do Lote 1 (só quem entra agora leva):</p>
 
         <div className="flex flex-col gap-4">
           {bonuses.map((b) => (

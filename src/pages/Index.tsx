@@ -1,15 +1,14 @@
 import FomoBar from "@/components/FomoBar";
 import HeroSection from "@/components/HeroSection";
+import MatrixSection from "@/components/MatrixSection";
 import AboutSection from "@/components/AboutSection";
 import PillarsSection from "@/components/PillarsSection";
-import DynamicSection from "@/components/DynamicSection";
 import ForWhoSection from "@/components/ForWhoSection";
-import MatrixSection from "@/components/MatrixSection";
 import BonusSection from "@/components/BonusSection";
+import QuoteSection from "@/components/QuoteSection";
 import InvestmentSection from "@/components/InvestmentSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import FaqSection from "@/components/FaqSection";
-import QuoteSection from "@/components/QuoteSection";
 import CtaSection from "@/components/CtaSection";
 import SiteFooter from "@/components/SiteFooter";
 import ThreeBackground from "@/components/ThreeBackground";
@@ -26,13 +25,12 @@ const Index = () => {
       <div className="vignette-overlay" />
       <FomoBar />
       <HeroSection />
-      <QuoteSection />
+      <MatrixSection />
       <AboutSection />
       <PillarsSection />
-      <DynamicSection />
-      <MatrixSection />
       <ForWhoSection />
       <BonusSection />
+      <QuoteSection />
       <InvestmentSection />
       <GuaranteeSection />
       <FaqSection />

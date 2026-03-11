@@ -4,15 +4,15 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-stretch overflow-hidden pt-10">
       {/* Full-bleed photo */}
-      <div className="absolute inset-0 z-[1]">
-        <img src={heroImg} alt="Fellipe The Kid" className="w-full h-full object-cover" style={{ filter: "brightness(0.55) saturate(1.15)" }} />
+      <div className="absolute inset-0 z-0">
+        <img src={heroImg} alt="Fellipe The Kid" className="w-full h-full object-cover object-center" style={{ filter: "saturate(1.15)" }} />
         {/* Overlay left fade */}
-        <div className="absolute inset-0 z-[2]" style={{
-          background: "linear-gradient(to right, rgba(5,5,5,0.98) 0%, rgba(5,5,5,0.7) 45%, rgba(5,5,5,0.1) 100%), linear-gradient(to top, rgba(5,5,5,0.95) 0%, transparent 40%)"
+        <div className="absolute inset-0 z-[1]" style={{
+          background: "linear-gradient(to right, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.4) 50%, transparent 100%), linear-gradient(to top, rgba(5,5,5,0.95) 0%, transparent 40%)"
         }} />
         {/* Green bloom */}
-        <div className="absolute inset-0 z-[3]" style={{
-          background: "radial-gradient(ellipse 60% 80% at 75% 45%, rgba(111,181,53,0.13) 0%, transparent 70%)"
+        <div className="absolute inset-0 z-[2]" style={{
+          background: "radial-gradient(ellipse 60% 80% at 75% 45%, rgba(111,181,53,0.15) 0%, transparent 70%)"
         }} />
       </div>
 
@@ -21,7 +21,7 @@ const HeroSection = () => {
         {/* Creator tag */}
         <div className="flex items-center gap-2.5 mb-7 text-[10px] tracking-[5px] uppercase text-foreground/35 hero-fade-up">
           <span className="w-9 h-px bg-primary block" />
-          Fellipe The Kid &nbsp;·&nbsp; <b className="text-primary/70">Stetik Club©</b>
+          <b className="text-primary/70">FELLIPE THE KID - STETIK CLUB®</b>
         </div>
 
         {/* Headline */}
@@ -30,38 +30,31 @@ const HeroSection = () => {
           letterSpacing: "-4px",
           animationDelay: "0.2s"
         }}>
-          Comunidade de<br />
+          Comunidade<br />
+          de<br />
           <em className="italic text-primary">execução</em><br />
           <strong className="font-semibold block">digital.</strong>
         </h1>
 
         {/* Sub */}
         <p className="text-[13px] leading-[1.75] text-foreground/75 max-w-[440px] mt-6 mb-8 tracking-[0.2px] hero-fade-up" style={{ animationDelay: "0.38s" }}>
-          Não é sobre <b className="text-foreground/95">assistir.</b> É sobre <b className="text-foreground/95">executar.</b><br />
+          Não é sobre <b className="text-foreground">assistir</b>. É sobre <b className="text-foreground">executar</b>.<br/><br/>
           Comunidade fechada para quem quer dominar o digital — aquisição, monetização e construção de marca de verdade.
         </p>
 
-        {/* Stats */}
-        <div className="flex gap-8 mb-9 hero-fade-up" style={{ animationDelay: "0.52s" }}>
+        {/* Price Info */}
+        <div className="flex items-center gap-8 mb-8 hero-fade-up" style={{ animationDelay: "0.5s" }}>
           <div>
-            <div className="font-display text-foreground font-light leading-none" style={{ fontSize: "clamp(1.6rem, 4vw, 2.2rem)" }}>
-              R$<span className="text-primary">29</span>
-            </div>
-            <div className="text-[9px] tracking-[3px] uppercase text-foreground/35 mt-1">por mês</div>
+            <div className="text-2xl font-display text-foreground"><span className="text-sm">R$</span>29</div>
+            <div className="text-[8px] tracking-[2px] uppercase text-foreground/40 mt-1">POR MÊS</div>
           </div>
-          <div className="w-px bg-foreground/10" />
           <div>
-            <div className="font-display text-foreground font-light leading-none" style={{ fontSize: "clamp(1.6rem, 4vw, 2.2rem)" }}>
-              100<span className="text-primary">%</span>
-            </div>
-            <div className="text-[9px] tracking-[3px] uppercase text-foreground/35 mt-1">digital</div>
+            <div className="text-2xl font-display text-foreground">100<span className="text-primary">%</span></div>
+            <div className="text-[8px] tracking-[2px] uppercase text-foreground/40 mt-1">DIGITAL</div>
           </div>
-          <div className="w-px bg-foreground/10" />
           <div>
-            <div className="font-display text-foreground font-light leading-none" style={{ fontSize: "clamp(1.6rem, 4vw, 2.2rem)" }}>
-              <span className="text-primary">∞</span>
-            </div>
-            <div className="text-[9px] tracking-[3px] uppercase text-foreground/35 mt-1">crescimento</div>
+            <div className="text-2xl font-display text-primary">∞</div>
+            <div className="text-[8px] tracking-[2px] uppercase text-foreground/40 mt-1">CRESCIMENTO</div>
           </div>
         </div>
 
@@ -90,12 +83,6 @@ const HeroSection = () => {
           <span className="text-[10px] text-foreground/40 tracking-[0.5px]">
             <b className="text-primary">+200 membros</b> já construindo dentro
           </span>
-        </div>
-
-        {/* Vagas pill */}
-        <div className="mt-5 inline-flex items-center gap-2 bg-primary/10 border border-primary/25 px-[18px] py-[7px] text-[9px] tracking-[3px] uppercase text-primary hero-fade-up" style={{ animationDelay: "0.85s" }}>
-          <span className="pulse-dot" style={{ width: 6, height: 6 }} />
-          Apenas <b className="text-foreground">7 vagas</b> restantes
         </div>
       </div>
 

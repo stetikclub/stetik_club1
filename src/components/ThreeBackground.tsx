@@ -73,7 +73,7 @@ const ThreeBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-none opacity-45"
+      className="fixed inset-0 z-[3] pointer-events-none opacity-45"
     />
   );
 };

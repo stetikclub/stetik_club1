@@ -2,17 +2,17 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Check, X } from "lucide-react";
 
 const yesItems = [
-  "Quer viver do digital de verdade, não de sonhos",
-  "Está disposto a executar, mesmo sem certeza total",
-  "Busca se cercar de quem está realmente construindo",
-  "Quer acelerar com estratégia e não com achismo",
+  "Tem raiva suficiente pra parar de ser escravo do despertador",
+  "Quer viver de verdade, não de migalhas que o chefe joga",
+  "Está disposto a executar mesmo com medo",
+  "Quer se cercar de quem já está ganhando dinheiro real",
 ];
 
 const noItems = [
-  "Espera uma fórmula mágica sem esforço",
-  "Consome conteúdo mas não age",
-  "Busca motivação, não construção",
-  "Quer resultado sem comprometimento",
+  "Ainda aceita ser tratado como número",
+  "Prefere sonhar do que agir",
+  "Quer motivação barata em vez de resultado",
+  "Tem medo de perder mais R$29 do que já perdeu em salário",
 ];
 
 const ForWhoSection = () => {

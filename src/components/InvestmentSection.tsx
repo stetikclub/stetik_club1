@@ -14,7 +14,7 @@ const InvestmentSection = () => {
       const now = Date.now();
       if (s) { const e = parseInt(s); if (e > now) return e; }
       const e = now + DURATION;
-      try { localStorage.setItem(TKEY, String(e)); } catch {}
+      try { localStorage.setItem(TKEY, String(e)); } catch (err) { console.error(err); }
       return e;
     };
     const cdEnd = getEnd();
@@ -33,20 +33,13 @@ const InvestmentSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const includes = [
-    "Comunidade ativa — sem silêncio, sem enrolação",
-    "Encontros ao vivo toda semana com estratégia real",
-    "Os 8 pilares de crescimento digital",
-    "Networking direto com quem está construindo",
-  ];
-
   return (
     <section id="investment" className="relative z-10 sec-border py-[120px] px-5">
       <div className="divline" />
       <div ref={ref} className="fade-in max-w-[680px] mx-auto">
-        <p className="text-[10px] tracking-[5px] uppercase text-primary/70 mb-4 font-body">Sua vaga está reservada</p>
+        <p className="text-[10px] tracking-[5px] uppercase text-primary/70 mb-4 font-body">LOTE 1 QUASE ESGOTADO — 7 VAGAS RESTANTES</p>
         <h2 className="font-display font-light leading-[0.9] tracking-tight text-foreground mb-10" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-          Você — sua vaga está<br /><em className="italic text-primary">esperando.</em>
+          Você vai entrar uma hora ou outra.<br />Não é melhor entrar <em className="italic text-primary">agora?</em>
         </h2>
 
         {/* Card */}
@@ -59,25 +52,23 @@ const InvestmentSection = () => {
           <div className="absolute bottom-0 right-0 w-px h-8 bg-foreground/25" />
 
           <div className="font-body text-[9px] tracking-[5px] uppercase text-foreground/70 mb-4">
-            Plano mensal — R$29/mês · Cancele quando quiser
+            Valor real do clube + bônus: R$997+
           </div>
 
           <div className="mb-5">
             <span className="font-display font-light text-foreground leading-none" style={{ fontSize: "clamp(3rem, 8vw, 5rem)" }}>R$29</span>
-            <span className="font-body text-[16px] text-foreground/45 font-light ml-2">/mês</span>
+            <span className="font-body text-[16px] text-foreground/45 font-light ml-2">/única vez</span>
           </div>
 
           <div className="flex flex-col gap-2.5 mb-5">
-            {includes.map((item, i) => (
-              <p key={i} className="font-display font-light leading-[1.75] text-foreground/90" style={{ fontSize: "clamp(14px, 2.2vw, 18px)" }}>
-                ✦ &nbsp;{item}
-              </p>
-            ))}
             <p className="font-display font-light leading-[1.75] text-foreground/90" style={{ fontSize: "clamp(14px, 2.2vw, 18px)" }}>
-              ✦ &nbsp;O que funciona <b className="text-foreground font-semibold">hoje</b> — não o que funcionou em 2020
+              ✦ &nbsp;Acesso ao Stetik Club e todos os 8 pilares
             </p>
             <p className="font-display font-light leading-[1.75] text-foreground/90" style={{ fontSize: "clamp(14px, 2.2vw, 18px)" }}>
-              Tudo isso por <b className="text-foreground font-semibold">R$29/mês.</b> Cancele quando quiser.
+              ✦ &nbsp;Todos os bônus exclusivos do Lote 1
+            </p>
+            <p className="font-display font-light leading-[1.75] text-foreground/90" style={{ fontSize: "clamp(14px, 2.2vw, 18px)" }}>
+              ✦ &nbsp;Pagamento único. <b className="text-foreground font-semibold">Sem mensalidade.</b>
             </p>
           </div>
         </div>
@@ -101,13 +92,13 @@ const InvestmentSection = () => {
               </div>
             ))}
           </div>
-          <p className="font-body text-[10px] text-primary font-semibold">⚠️ Preço pode subir após este período</p>
+          <p className="font-body text-[10px] text-primary font-semibold">⚠️ Próximo lote entra com condições diferentes e sem os bônus</p>
         </div>
 
         {/* Slots */}
         <div className="border border-foreground/10 p-6 mt-3.5" style={{ background: "rgba(255,255,255,0.02)" }}>
           <div className="flex items-center justify-between mb-3.5">
-            <span className="font-body text-[12px] font-bold text-foreground/85">Vagas desta semana</span>
+            <span className="font-body text-[12px] font-bold text-foreground/85">Vagas do Lote 1</span>
             <span className="font-body text-[9px] font-bold tracking-[1.5px] uppercase px-2.5 py-1 bg-primary text-background badge-pulse">Quase esgotado</span>
           </div>
           <div className="h-1.5 bg-foreground/5 overflow-hidden mb-2">
@@ -125,16 +116,16 @@ const InvestmentSection = () => {
         </div>
 
         {/* CTA Button */}
-        <a href="#" className="flex items-center justify-center gap-3.5 w-full mt-3.5 bg-primary-mid text-foreground border-2 border-primary font-body font-bold text-[11px] tracking-[5px] uppercase py-5 px-6 no-underline transition-colors hover:bg-primary">
-          GARANTIR MINHA VAGA — R$29/MÊS
+        <a href="#" className="flex items-center justify-center gap-3.5 w-full mt-3.5 bg-primary-mid text-foreground border-2 border-primary font-body font-bold text-[11px] tracking-[5px] uppercase py-5 px-6 no-underline transition-colors hover:bg-primary" style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%)" }}>
+          GARANTIR MINHA VAGA AGORA — R$29
           <span className="w-5 h-px bg-current relative inline-block">
             <span className="absolute right-0 -top-[3px] w-[7px] h-[7px] border-r border-t border-current rotate-45 block" />
           </span>
         </a>
 
         {/* Trust */}
-        <div className="flex gap-4 flex-wrap mt-3.5">
-          {["Cancele quando quiser", "Acesso imediato", "Sem fidelidade", "Pagamento seguro"].map((item) => (
+        <div className="flex gap-4 flex-wrap mt-3.5 justify-center">
+          {["Acesso imediato", "Sem mensalidade", "7 dias risco zero", "Pagamento seguro"].map((item) => (
             <span key={item} className="font-body text-[9px] tracking-[1.5px] uppercase text-foreground/40 flex items-center gap-1.5">
               <span className="text-primary font-bold">✓</span>{item}
             </span>

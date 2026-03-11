@@ -12,7 +12,7 @@ const FomoBar = () => {
       const now = Date.now();
       if (s) { const e = parseInt(s); if (e > now) return e; }
       const e = now + DURATION;
-      try { localStorage.setItem(TKEY, String(e)); } catch {}
+      try { localStorage.setItem(TKEY, String(e)); } catch (err) { console.error(err); }
       return e;
     };
     let tEnd = getEnd();
@@ -22,7 +22,7 @@ const FomoBar = () => {
       const r = Math.max(0, Math.floor(ms / 1000));
       if (r === 0) {
         tEnd = Date.now() + DURATION;
-        try { localStorage.setItem(TKEY, String(tEnd)); } catch {}
+        try { localStorage.setItem(TKEY, String(tEnd)); } catch (err) { console.error(err); }
       }
       const m = String(Math.floor(r / 60)).padStart(2, "0");
       const s = String(r % 60).padStart(2, "0");

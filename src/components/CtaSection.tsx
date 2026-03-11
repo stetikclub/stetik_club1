@@ -18,16 +18,16 @@ const CtaSection = () => {
         </h2>
 
         <p className="font-body text-[12px] text-foreground/40 max-w-[400px] mx-auto mb-10 leading-[1.85]">
-          Cada semana que passa sem executar é uma semana que você entrega de vantagem para quem já está dentro.
+          Você tem duas opções agora: fechar essa página e continuar na mesma vida que você odeia, ou clicar no botão abaixo e começar a construir a sua saída.
         </p>
 
-        <a href="#investment" className="inline-flex items-center justify-center gap-3.5 bg-primary-mid text-foreground border border-primary font-body font-bold text-[11px] tracking-[5px] uppercase px-14 py-5 no-underline transition-all hover:bg-primary hover:scale-[1.015] active:scale-[0.97]">
-          Entrar no Stetik Club
+        <a href="#investment" className="inline-flex items-center justify-center gap-3.5 bg-primary-mid text-foreground border border-primary font-body font-bold text-[11px] tracking-[5px] uppercase px-14 py-5 no-underline transition-all hover:bg-primary hover:scale-[1.015] active:scale-[0.97]" style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%)" }}>
+          EU QUERO SAIR DO CLT
         </a>
 
         {/* Trust badges */}
         <div className="mt-7 flex items-center justify-center gap-4 flex-wrap">
-          {["Sem fidelidade", "Acesso imediato", "Vagas limitadas"].map((item) => (
+          {["Pagamento Único", "Acesso imediato", "Vagas limitadas"].map((item) => (
             <span key={item} className="font-body text-[9px] tracking-[2px] uppercase text-foreground/20 flex items-center gap-1.5">
               <span className="text-primary">✓</span>{item}
             </span>
@@ -40,7 +40,7 @@ const CtaSection = () => {
           <span className="w-1 h-1 rounded-full bg-primary/25" />
           <span>Execução</span>
           <span className="w-1 h-1 rounded-full bg-primary/25" />
-          <span>Resultado</span>
+          <span>Liberdade</span>
         </div>
       </div>
     </section>

@@ -2,14 +2,14 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Target, DollarSign, FileText, Edit3, Image, Zap, Navigation, Activity } from "lucide-react";
 
 const pillars = [
-  { icon: Target, num: "01", title: "Aquisição & Tráfego", desc: "Domine a arte de atrair o público certo, na hora certa." },
-  { icon: DollarSign, num: "02", title: "Monetização Digital", desc: "Transforme atenção em receita consistente e escalável." },
-  { icon: FileText, num: "03", title: "Modelagem de Ofertas", desc: "Crie ofertas irresistíveis que vendem sozinhas." },
-  { icon: Edit3, num: "04", title: "Copy & Persuasão", desc: "Palavras que movem pessoas e convertem resultados." },
-  { icon: Image, num: "05", title: "Criação & Design", desc: "Estética estratégica que posiciona e diferencia." },
-  { icon: Zap, num: "06", title: "Automação & Tecnologia", desc: "Escale suas operações sem aumentar o esforço." },
-  { icon: Navigation, num: "07", title: "Marca & Autoridade", desc: "Construa percepção de valor e presença digital duradoura." },
-  { icon: Activity, num: "08", title: "Mentalidade de Construção", desc: "Pense, aja e persista como quem realmente constrói." },
+  { icon: Target, num: "01", title: "Aquisição & Tráfego", desc: "Atrair gente certa pra sua oferta sem ficar mendigando like" },
+  { icon: DollarSign, num: "02", title: "Monetização Digital", desc: "Transformar atenção em dinheiro que entra todo dia" },
+  { icon: FileText, num: "03", title: "Modelagem de Ofertas", desc: "Criar ofertas que vendem sozinhas enquanto você dorme" },
+  { icon: Edit3, num: "04", title: "Copy & Persuasão", desc: "Escrever textos que fazem as pessoas comprar sem pensar duas vezes" },
+  { icon: Image, num: "05", title: "Criação & Design", desc: "Fazer conteúdo que chama atenção e vende" },
+  { icon: Zap, num: "06", title: "Automação & Tecnologia", desc: "Automatizar pra trabalhar menos e ganhar mais" },
+  { icon: Navigation, num: "07", title: "Marca & Autoridade", desc: "Construir uma presença que passa confiança e dinheiro" },
+  { icon: Activity, num: "08", title: "Mentalidade de Construção", desc: "Parar de sonhar e começar a construir de verdade" },
 ];
 
 const PillarsSection = () => {

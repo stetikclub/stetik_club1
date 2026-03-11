@@ -2,19 +2,19 @@ import { useEffect, useRef, useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const painPoints = [
-  "Seu chefe decide se você pode ou não estar com seu filho doente",
-  "O governo tira 30% do seu salário antes de você ver qualquer centavo",
-  "Você ganha o suficiente para sobreviver — nunca para VIVER",
-  "Sua família depende de um emprego que pode te demitir amanhã",
-  "Você troca seu tempo, sua saúde e seus sonhos por um salário miserável",
-  "Você trabalha 30 anos para se aposentar mal e mal",
+  "Acorda no horário que te mandam.",
+  "Trabalha pra enriquecer outro.",
+  "Pede permissão pra ver seu filho doente.",
+  "O governo rouba 30% do seu suor antes de você tocar.",
+  "Você troca saúde, tempo e sonhos por migalhas.",
+  "Trabalha 30 anos pra se aposentar mal e mal.",
 ];
 
 const freedomPoints = [
-  "Acordar sem despertador",
-  "Abrir o notebook de qualquer lugar do mundo",
-  "Ver dinheiro entrar enquanto toma café com sua família",
-  "Sem chefe. Sem CLT. Sem bater ponto. Sem pedir licença pra viver",
+  "Acordar quando quiser",
+  "Trabalhar de qualquer lugar do mundo",
+  "Ver dinheiro entrar enquanto toma café com a família",
+  "Sem chefe, sem ponto, sem pedir licença pra viver",
 ];
 
 const MatrixSection = () => {
@@ -159,7 +159,7 @@ const MatrixSection = () => {
           Isso não é vida.
         </p>
         <p className="text-[11px] text-foreground/40 tracking-[1px] mb-14">
-          Isso é uma prisão com salário.
+          Isso é escravidão com salário. Quanto mais você espera, mais anos joga fora.
         </p>
 
         {/* Divider */}
@@ -177,11 +177,8 @@ const MatrixSection = () => {
           ))}
         </div>
 
-        <p className="text-[12px] text-foreground/40 italic mb-2">
-          "Mas isso é para poucos…"
-        </p>
         <p className="text-[13px] text-foreground/80 font-semibold mb-12">
-          Não. É para quem <em className="text-primary italic">decide sair.</em>
+          Não é pra poucos. É pra quem tem <em className="text-primary italic">raiva suficiente pra sair dessa prisão.</em>
         </p>
 
         {/* CTA */}
