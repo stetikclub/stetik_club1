@@ -1,11 +1,9 @@
-import heroImg from "@/assets/hero-fellipe.jpeg";
-
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-stretch overflow-hidden pt-10">
       {/* Full-bleed photo */}
       <div className="absolute inset-0 z-[1]">
-        <img src={heroImg} alt="Fellipe The Kid" className="w-full h-full object-cover" style={{ filter: "brightness(0.55) saturate(1.15)" }} />
+        <img src="https://ctlxyuoetucgtevqpeyy.supabase.co/storage/v1/object/public/MIDIAS/WhatsApp%20Image%202026-03-08%20at%2008.05.32.jpeg" alt="Fellipe The Kid" referrerPolicy="no-referrer" className="w-full h-full object-cover" style={{ filter: "brightness(0.55) saturate(1.15)" }} />
         {/* Overlay left fade */}
         <div className="absolute inset-0 z-[2]" style={{
           background: "linear-gradient(to right, rgba(5,5,5,0.98) 0%, rgba(5,5,5,0.7) 45%, rgba(5,5,5,0.1) 100%), linear-gradient(to top, rgba(5,5,5,0.95) 0%, transparent 40%)"
