@@ -4,15 +4,15 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-stretch overflow-hidden pt-10">
       {/* Full-bleed photo */}
-      <div className="absolute inset-0 z-0">
-        <img src={heroImg} alt="Fellipe The Kid" className="w-full h-full object-cover object-center" style={{ filter: "saturate(1.15)" }} />
+      <div className="absolute inset-0 z-[1]">
+        <img src={heroImg} alt="Fellipe The Kid" className="w-full h-full object-cover" style={{ filter: "brightness(0.55) saturate(1.15)" }} />
         {/* Overlay left fade */}
-        <div className="absolute inset-0 z-[1]" style={{
-          background: "linear-gradient(to right, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.4) 50%, transparent 100%), linear-gradient(to top, rgba(5,5,5,0.95) 0%, transparent 40%)"
+        <div className="absolute inset-0 z-[2]" style={{
+          background: "linear-gradient(to right, rgba(5,5,5,0.98) 0%, rgba(5,5,5,0.7) 45%, rgba(5,5,5,0.1) 100%), linear-gradient(to top, rgba(5,5,5,0.95) 0%, transparent 40%)"
         }} />
         {/* Green bloom */}
-        <div className="absolute inset-0 z-[2]" style={{
-          background: "radial-gradient(ellipse 60% 80% at 75% 45%, rgba(111,181,53,0.15) 0%, transparent 70%)"
+        <div className="absolute inset-0 z-[3]" style={{
+          background: "radial-gradient(ellipse 60% 80% at 75% 45%, rgba(111,181,53,0.13) 0%, transparent 70%)"
         }} />
       </div>
 
@@ -21,7 +21,13 @@ const HeroSection = () => {
         {/* Creator tag */}
         <div className="flex items-center gap-2.5 mb-7 text-[10px] tracking-[5px] uppercase text-foreground/35 hero-fade-up">
           <span className="w-9 h-px bg-primary block" />
-          <b className="text-primary/70">FELLIPE THE KID - STETIK CLUB®</b>
+          Fellipe The Kid &nbsp;·&nbsp; <b className="text-primary/70">Stetik Club©</b>
+        </div>
+
+        {/* Urgency badge */}
+        <div className="inline-flex items-center gap-2 bg-destructive/10 border border-destructive/40 px-4 py-1.5 text-[9px] tracking-[3px] uppercase text-destructive mb-6 hero-fade-up" style={{ animationDelay: "0.1s" }}>
+          <span className="w-1.5 h-1.5 rounded-full bg-destructive animate-pulse" />
+          LOTE 1 QUASE ESGOTADO — SÓ 3 VAGAS SOBRARAM
         </div>
 
         {/* Headline */}
@@ -30,36 +36,18 @@ const HeroSection = () => {
           letterSpacing: "-4px",
           animationDelay: "0.2s"
         }}>
-          Comunidade<br />
-          de<br />
-          <em className="italic text-primary">execução</em><br />
-          <strong className="font-semibold block">digital.</strong>
+          Eu vou te<br />
+          <em className="italic text-primary">tirar do</em><br />
+          <strong className="font-semibold block">CLT.</strong>
         </h1>
 
         {/* Sub */}
         <p className="text-[13px] leading-[1.75] text-foreground/75 max-w-[440px] mt-6 mb-8 tracking-[0.2px] hero-fade-up" style={{ animationDelay: "0.38s" }}>
-          Não é sobre <b className="text-foreground">assistir</b>. É sobre <b className="text-foreground">executar</b>.<br/><br/>
-          Comunidade fechada para quem quer dominar o digital — aquisição, monetização e construção de marca de verdade.
+          Não com papo furado. Com execução real — do mesmo jeito que eu fiz, saindo do interior sem grana e hoje vivo em Balneário Camboriú com liberdade total, tatuagem no pescoço e Ferrari na garagem. Aqui ninguém solta a mão de ninguém.
         </p>
 
-        {/* Price Info */}
-        <div className="flex items-center gap-8 mb-8 hero-fade-up" style={{ animationDelay: "0.5s" }}>
-          <div>
-            <div className="text-2xl font-display text-foreground"><span className="text-sm">R$</span>29</div>
-            <div className="text-[8px] tracking-[2px] uppercase text-foreground/40 mt-1">POR MÊS</div>
-          </div>
-          <div>
-            <div className="text-2xl font-display text-foreground">100<span className="text-primary">%</span></div>
-            <div className="text-[8px] tracking-[2px] uppercase text-foreground/40 mt-1">DIGITAL</div>
-          </div>
-          <div>
-            <div className="text-2xl font-display text-primary">∞</div>
-            <div className="text-[8px] tracking-[2px] uppercase text-foreground/40 mt-1">CRESCIMENTO</div>
-          </div>
-        </div>
-
         {/* CTAs */}
-        <div className="flex flex-wrap gap-3 mb-5 hero-fade-up" style={{ animationDelay: "0.62s" }}>
+        <div className="flex flex-wrap gap-3 mb-5 hero-fade-up" style={{ animationDelay: "0.52s" }}>
           <a href="#investment" className="inline-flex items-center justify-center gap-2.5 bg-primary-mid text-foreground border border-primary font-body font-bold text-[11px] tracking-[5px] uppercase px-[52px] py-[18px] no-underline transition-all hover:bg-primary hover:scale-[1.015] active:scale-[0.97]">
             Quero fazer parte
           </a>
@@ -83,6 +71,12 @@ const HeroSection = () => {
           <span className="text-[10px] text-foreground/40 tracking-[0.5px]">
             <b className="text-primary">+200 membros</b> já construindo dentro
           </span>
+        </div>
+
+        {/* Vagas pill */}
+        <div className="mt-5 inline-flex items-center gap-2 bg-destructive/10 border border-destructive/30 px-[18px] py-[7px] text-[9px] tracking-[3px] uppercase text-destructive hero-fade-up" style={{ animationDelay: "0.85s" }}>
+          <span className="pulse-dot" style={{ width: 6, height: 6, background: "hsl(var(--destructive))" }} />
+          Apenas <b className="text-foreground">7 vagas</b> restantes
         </div>
       </div>
 

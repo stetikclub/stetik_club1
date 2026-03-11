@@ -1,11 +1,10 @@
 import FomoBar from "@/components/FomoBar";
 import HeroSection from "@/components/HeroSection";
-import MatrixSection from "@/components/MatrixSection";
 import AboutSection from "@/components/AboutSection";
 import PillarsSection from "@/components/PillarsSection";
 import ForWhoSection from "@/components/ForWhoSection";
+import MatrixSection from "@/components/MatrixSection";
 import BonusSection from "@/components/BonusSection";
-import QuoteSection from "@/components/QuoteSection";
 import InvestmentSection from "@/components/InvestmentSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import FaqSection from "@/components/FaqSection";
@@ -15,6 +14,7 @@ import ThreeBackground from "@/components/ThreeBackground";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import ToastNotification from "@/components/ToastNotification";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -30,7 +30,7 @@ const Index = () => {
       <PillarsSection />
       <ForWhoSection />
       <BonusSection />
-      <QuoteSection />
+      <TestimonialsSection />
       <InvestmentSection />
       <GuaranteeSection />
       <FaqSection />

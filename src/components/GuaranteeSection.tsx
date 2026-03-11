@@ -9,7 +9,7 @@ const GuaranteeSection = () => {
       <div ref={ref} className="fade-in max-w-[680px] mx-auto text-center">
         <p className="text-[10px] tracking-[5px] uppercase text-primary/70 mb-4 font-body">Garantia incondicional</p>
         <h2 className="font-display font-light leading-[0.9] tracking-tight text-foreground mb-6" style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}>
-          7 DIAS DE GARANTIA TOTAL — <em className="italic text-primary">RISCO ZERO.</em>
+          7 dias para decidir.<br /><em className="italic text-primary">Risco zero.</em>
         </h2>
         <div className="border border-foreground/10 p-8 mx-auto max-w-[520px]" style={{ background: "rgba(255,255,255,0.02)" }}>
           <div className="w-14 h-14 mx-auto mb-5 border border-primary/30 flex items-center justify-center">

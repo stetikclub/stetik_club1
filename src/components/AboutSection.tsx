@@ -4,6 +4,12 @@ const AboutSection = () => {
   const ref1 = useScrollReveal();
   const ref3 = useScrollReveal();
 
+  const stats = [
+    { value: "+200", label: "membros ativos" },
+    { value: "8", label: "pilares de crescimento" },
+    { value: "52+", label: "encontros ao vivo/ano" },
+  ];
+
   const recentMembers = [
     { time: "Hoje, 04:12", name: "Camila R.", city: "São Paulo, SP", area: "Social Media" },
     { time: "Hoje, 03:45", name: "Lucas M.", city: "Curitiba, PR", area: "Tráfego Pago" },
@@ -18,15 +24,32 @@ const AboutSection = () => {
       <div className="max-w-[680px] mx-auto">
         {/* Header */}
         <div ref={ref1} className="fade-in">
-          <p className="text-[10px] tracking-[5px] uppercase text-primary/70 mb-4 font-body">Fellipe Fuzaro</p>
-          <h2 className="font-display font-light leading-[0.9] tracking-tight text-foreground mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-            conhecido como<br /><em className="italic text-primary">Fellipe The Kid</em>
+          <p className="text-[10px] tracking-[5px] uppercase text-primary/70 mb-4 font-body">Quem está te guiando</p>
+          <h2 className="font-display font-light leading-[0.9] tracking-tight text-foreground" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
+            Fellipe Fuzaro
           </h2>
-          <p className="font-body text-[13px] text-foreground/70 leading-[1.8] max-w-[520px] mb-10">
+          <p className="mb-8">
+            <span className="text-foreground/35 tracking-[4px] uppercase text-[10px]">conhecido como </span>
+            <span className="text-primary/80 font-bold text-[10px]">Fellipe The Kid</span>
+          </p>
+          <p className="font-body text-[13px] text-foreground/60 leading-[1.9] max-w-[560px] mb-6">
             Comecei como você: CLT no interior de SP, sem grana, sem contato, sem nome. Em 2016 entrei em uma comunidade séria e tudo mudou. Saí do emprego, conquistei liberdade financeira e hoje moro em Balneário Camboriú com tatuagem no pescoço e Ferrari na garagem.
-            <br /><br />
+          </p>
+          <p className="font-body text-[13px] text-foreground/60 leading-[1.9] max-w-[560px] mb-10">
             Criei o Stetik Club para você não precisar passar sozinho pelo que eu passei. Aqui não tem enrolação — tem execução real e suporte direto de quem já viveu isso.
           </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 mb-14">
+            {stats.map((s) => (
+              <div key={s.label} className="border border-foreground/10 p-5 text-center" style={{ background: "rgba(255,255,255,0.02)" }}>
+                <div className="font-display font-light text-primary leading-none mb-1.5" style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)" }}>
+                  {s.value}
+                </div>
+                <span className="font-body text-[9px] tracking-[2px] uppercase text-foreground/35">{s.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Recent Members */}

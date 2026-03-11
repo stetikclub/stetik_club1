@@ -177,8 +177,11 @@ const MatrixSection = () => {
           ))}
         </div>
 
+        <p className="text-[12px] text-foreground/40 italic mb-2">
+          "Mas isso é para poucos…"
+        </p>
         <p className="text-[13px] text-foreground/80 font-semibold mb-12">
-          Não é pra poucos. É pra quem tem <em className="text-primary italic">raiva suficiente pra sair dessa prisão.</em>
+          Não. É pra quem <em className="text-primary italic">tem raiva suficiente pra sair dessa prisão.</em>
         </p>
 
         {/* CTA */}

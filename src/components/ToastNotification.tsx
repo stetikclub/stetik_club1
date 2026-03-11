@@ -1,21 +1,27 @@
 import { useState, useEffect } from "react";
 
-const names = ["Lucas M.", "Ana C.", "Rafael T.", "Fernanda S.", "Diego L.", "Camila R.", "Bruno A.", "Priscila N.", "Thiago F.", "Juliana M."];
-const actions = ["acabou de entrar no clube", "garantiu sua vaga agora", "assegurou acesso ao Stetik Club", "parou de hesitar e entrou"];
+const entries = [
+  { name: "Lucas M.", city: "São Paulo, SP", area: "Tráfego Pago" },
+  { name: "Ana C.", city: "Curitiba, PR", area: "Copywriting" },
+  { name: "Rafael T.", city: "Florianópolis, SC", area: "E-commerce" },
+  { name: "Fernanda S.", city: "Belo Horizonte, MG", area: "Social Media" },
+  { name: "Diego L.", city: "Rio de Janeiro, RJ", area: "Branding" },
+  { name: "Camila R.", city: "Goiânia, GO", area: "Infoprodutos" },
+  { name: "Bruno A.", city: "Recife, PE", area: "Afiliados" },
+  { name: "Priscila N.", city: "Porto Alegre, RS", area: "Design" },
+  { name: "Thiago F.", city: "Fortaleza, CE", area: "Automação" },
+  { name: "Juliana M.", city: "Campinas, SP", area: "Tráfego Pago" },
+];
 
 const ToastNotification = () => {
   const [visible, setVisible] = useState(false);
-  const [current, setCurrent] = useState({ name: "", action: "", initial: "" });
+  const [current, setCurrent] = useState({ name: "", city: "", area: "" });
 
   useEffect(() => {
     let idx = 0;
     const show = () => {
-      const i = idx % names.length;
-      setCurrent({
-        name: names[i],
-        action: actions[i % actions.length],
-        initial: names[i].charAt(0),
-      });
+      const i = idx % entries.length;
+      setCurrent(entries[i]);
       setVisible(true);
       idx++;
       setTimeout(() => setVisible(false), 4500);
@@ -39,11 +45,11 @@ const ToastNotification = () => {
         className="w-9 h-9 rounded-full flex items-center justify-center text-[13px] font-bold shrink-0 font-body"
         style={{ background: "rgba(111,181,53,0.16)", color: "hsl(98 55% 42%)" }}
       >
-        {current.initial}
+        {current.name ? current.name.charAt(0) : ""}
       </div>
       <div>
-        <div className="text-[12px] font-bold text-foreground mb-0.5 font-body">{current.name}</div>
-        <div className="text-[11px] text-foreground/55 font-body">{current.action}</div>
+        <div className="text-[12px] font-bold text-foreground mb-0.5 font-body">{current.name} · {current.city}</div>
+        <div className="text-[10px] text-primary/70 font-body">{current.area} · entrou por R$29</div>
       </div>
     </div>
   );

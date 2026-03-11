@@ -2,11 +2,12 @@ import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const faqs = [
-  { q: "R$29 é mensalidade?", a: "NÃO. É um pagamento único. Você paga R$29 UMA VEZ e tem acesso vitalício ao Stetik Club e a todos os bônus. Sem pegadinha, sem cobrança surpresa no mês que vem." },
-  { q: "Eu sou CLT e não tenho tempo. Serve pra mim?", a: "Se você não tem tempo pra mudar de vida, vai ser CLT pra sempre. O Clube foi desenhado pra quem tem 1h por dia pra executar. Direto ao ponto, sem enrolação." },
-  { q: "E se eu não gostar?", a: "Você tem 7 dias de garantia incondicional. Entra, olha tudo. Se achar que é mais do mesmo, aperta um botão e eu devolvo seus R$29. Risco zero." },
-  { q: "Como eu acesso?", a: "Assim que o pagamento for aprovado, você recebe o acesso imediato no seu e-mail. Pagamentos via PIX ou Cartão liberam na hora." },
-  { q: "Por que tão barato?", a: "Porque eu quero criar a maior comunidade de execução do Brasil. R$29 é só um filtro pra tirar os curiosos e deixar só quem realmente quer fazer acontecer." },
+  { q: "R$29 é mensalidade?", a: "Não. É pagamento único, uma vez só. Sem mensalidade, sem cobrança recorrente, sem pegadinha. Você paga R$29 uma vez e fica dentro." },
+  { q: "Eu sou CLT e não tenho tempo. Serve pra mim?", a: "Serve especialmente pra você. O Stetik Club foi criado por alguém que saiu do CLT. A metodologia é pensada pra quem ainda está no emprego e quer construir a saída. Você não precisa de 8 horas por dia — precisa de direção." },
+  { q: "E se eu não gostar?", a: "Você tem 7 dias de garantia total. Entra, acessa tudo, participa da comunidade, testa. Se achar que não vale, aperta um botão e eu devolvo seus R$29 na hora. Sem te perguntar nada. O risco é 100% meu." },
+  { q: "Como eu acesso?", a: "Assim que o pagamento é confirmado, você recebe acesso imediato à comunidade, às gravações de todas as calls e a todos os bônus do Lote 1." },
+  { q: "Por que tão barato?", a: "Porque o objetivo é ter volume de pessoas executando — quanto mais gente dentro ganhando resultado, mais forte fica a comunidade. R$29 não é barato. É estratégico." },
+  { q: "Quem são as pessoas que estão dentro?", a: "São pessoas que saíram ou querem sair do CLT, que levam a sério a construção de renda digital. Aqui não tem turista — tem gente que executa." },
 ];
 
 const FaqSection = () => {
@@ -40,7 +41,7 @@ const FaqSection = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="font-body text-[11px] text-foreground/20 mb-5">A maior dúvida é ficar parado enquanto outros avançam.</p>
+          <p className="font-body text-[11px] text-foreground/20 mb-5">Ainda em dúvida? A maior dúvida é ficar parado enquanto outros avançam.</p>
           <a href="#investment" className="inline-flex items-center gap-2 border border-primary/30 px-8 py-3 font-body text-[10px] tracking-[4px] uppercase text-primary no-underline transition-colors hover:border-primary hover:text-foreground">
             Ver condições de entrada
           </a>
