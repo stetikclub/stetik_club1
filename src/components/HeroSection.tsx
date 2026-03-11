@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-stretch overflow-hidden pt-10">
+    <section id="hero" className="relative z-10 min-h-screen flex items-stretch overflow-hidden pt-10">
       {/* Full-bleed photo */}
       <div className="absolute inset-0 z-[1]">
         <img src="https://ctlxyuoetucgtevqpeyy.supabase.co/storage/v1/object/public/MIDIAS/WhatsApp%20Image%202026-03-08%20at%2008.05.32.jpeg" alt="Fellipe The Kid" className="w-full h-full object-cover" style={{ filter: "brightness(0.55) saturate(1.15)" }} />
